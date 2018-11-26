@@ -1,9 +1,10 @@
 package abstractClass.challenge;
 
 public class Node extends ListItem {
-    public Node(Object value){
-        this(value,null,null);
+    public Node(Object value) {
+        this(value, null, null);
     }
+
     public Node(Object value, ListItem leftListItem, ListItem rightListItem) {
         super(value, leftListItem, rightListItem);
     }
@@ -30,11 +31,8 @@ public class Node extends ListItem {
 
     @Override
     int compareTo(ListItem listItem) {
-        if(listItem == null) return 0;
+        if (listItem == null) return 0;
         return this.getValue().toString().compareTo(listItem.getValue().toString());
     }
 
-    int compareTo(Object value){
-        return this.getValue().toString().compareTo(value.toString());
-    }
 }
